@@ -200,8 +200,8 @@ server:
     LOGIN_ATTEMPT_DURATION: 120         #Period in seconds the login attempt remains registered on the system.
 
     #Ip Configuration
-    HOST: 127.0.0.1                     # CHANGE_ME WAN IPv4 address, 127.0.0.1 for localhost play, internal IP (check router) for local network play
-    LANHOST: 127.0.0.1                  # CHANGE_ME LAN IPv4 address, 127.0.0.1 for localhost play, internal IP (check router) for local network play
+    HOST: 192.168.0.46                     # CHANGE_ME WAN IPv4 address, 127.0.0.1 for localhost play, internal IP (check router) for local network play
+    LANHOST: 192.168.0.46                  # CHANGE_ME LAN IPv4 address, 127.0.0.1 for localhost play, internal IP (check router) for local network play
     LOCALHOST: 127.0.0.1                # Loopback IPv4 address
     GMSERVER: false
 
@@ -242,10 +242,10 @@ server:
     USE_SERVER_AUTOASSIGNER: false      # HeavenMS-builtin autoassigner, uses algorithm based on distributing AP accordingly with required secondary stat on equipments.
     USE_REFRESH_RANK_MOVE: true
     USE_ENFORCE_ADMIN_ACCOUNT: false    # Forces accounts having GM characters to be treated as a "GM account" by the client (localhost). Some of the GM account perks is the ability to FLY, but unable to TRADE.
-    USE_ENFORCE_NOVICE_EXPRATE: false   # Hardsets experience rate 1x for beginners level 10 or under. Ideal for roaming on novice areas without caring too much about losing some stats.
+    USE_ENFORCE_NOVICE_EXPRATE: true    # Hardsets experience rate 1x for beginners level 10 or under. Ideal for roaming on novice areas without caring too much about losing some stats.
     USE_ENFORCE_HPMP_SWAP: false        # Forces players to reuse stats (via AP Resetting) located on HP/MP pool only inside the HP/MP stats.
     USE_ENFORCE_MOB_LEVEL_RANGE: true   # Players N levels below the killed mob will gain no experience from defeating it.
-    USE_ENFORCE_JOB_LEVEL_RANGE: false  # Caps the player level on the minimum required to advance their current jobs.
+    USE_ENFORCE_JOB_LEVEL_RANGE: true   # Caps the player level on the minimum required to advance their current jobs.
     USE_ENFORCE_JOB_SP_RANGE: false     # Caps the player SP level on the total obtainable by their current jobs. After changing jobs, missing SP will be retrieved.
     USE_ENFORCE_ITEM_SUGGESTION: false  # Forces the Owl of Minerva and the Cash Shop to always display the defined item array instead of those featured by the players.
     USE_ENFORCE_UNMERCHABLE_CASH: true  # Forces players to not sell CASH items via merchants, drops of it disappears.
@@ -258,7 +258,7 @@ server:
     USE_ERASE_UNTRADEABLE_DROP: true    # Forces flagged untradeable items to disappear when dropped.
     USE_ERASE_PET_ON_EXPIRATION: false  # Forces pets to be removed from inventory when expire time comes, rather than converting it to a doll.
     USE_BUFF_MOST_SIGNIFICANT: true     # When applying buffs, the player will stick with the highest stat boost among the listed, rather than overwriting stats.
-    USE_BUFF_EVERLASTING: false         # Every applied buff on players holds expiration time so high it'd be considered permanent. Suggestion thanks to Vcoc.
+    USE_BUFF_EVERLASTING: true          # Every applied buff on players holds expiration time so high it'd be considered permanent. Suggestion thanks to Vcoc.
     USE_MULTIPLE_SAME_EQUIP_DROP: true  # Enables multiple drops by mobs of the same equipment, number of possible drops based on the quantities provided at the drop data.
     USE_ENABLE_FULL_RESPAWN: true       # At respawn task, always respawn missing mobs when they're available. Spawn count doesn't depend on how many players are currently there.
     USE_ENABLE_CHAT_LOG: false          # Write in-game chat to log
@@ -305,7 +305,7 @@ server:
     PARTY_BONUS_EXP_RATE: 1.0           # Rate for the party exp bonus reward.
 
     #Miscellaneous Configuration
-    TIMEZONE: GMT
+    TIMEZONE: GMT+8
     CHARSET: US-ASCII                      # Is loaded first, so applies to the rest of this config. Defaults to US-ASCII if invalid or not set.
     USE_DISPLAY_NUMBERS_WITH_COMMA: true   # Enforce comma on displayed strings (use this when USE_UNITPRICE_WITH_COMMA is active and you still want to display comma-separated values).
     USE_UNITPRICE_WITH_COMMA: true         # Set this accordingly with the layout of the unitPrices on Item.wz XML's, whether it's using commas or dots to represent fractions.
@@ -378,7 +378,7 @@ server:
     QUEST_POINT_PER_EVENT_CLEAR: 0         # Each completed event instance awards N quest points, set 0 to disable.
 
     #Guild Configuration
-    CREATE_GUILD_MIN_PARTNERS: 6           # Minimum number of members on Guild Headquarters to establish a new guild.
+    CREATE_GUILD_MIN_PARTNERS: 1           # Minimum number of members on Guild Headquarters to establish a new guild.
     CREATE_GUILD_COST: 1500000
     CHANGE_EMBLEM_COST: 5000000
     EXPAND_GUILD_BASE_COST: 500000
