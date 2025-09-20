@@ -9,6 +9,8 @@ services:
     ports:
       # Login server
       - "8484:8484"
+      # Registration endpoint
+      - "8585:8585"
       # Channels.
       # Format: WWCC, where WW is 75 plus the world number and CC is 75 plus the channel number (both zero indexed).
       # In this case, world 1 channels 1-3.

@@ -77,6 +77,7 @@ import client.command.commands.gm2.LevelCommand;
 import client.command.commands.gm2.LevelProCommand;
 import client.command.commands.gm2.LootCommand;
 import client.command.commands.gm2.MaxSkillCommand;
+import client.command.commands.gm2.LookupMapCommand;
 import client.command.commands.gm2.MaxStatCommand;
 import client.command.commands.gm2.MobSkillCommand;
 import client.command.commands.gm2.ReachCommand;
@@ -421,6 +422,7 @@ public class CommandsExecutor {
         addCommand("job", 2, JobCommand.class);
         addCommand("unbug", 2, UnBugCommand.class);
         addCommand("id", 2, IdCommand.class);
+        addCommand("lookupmap", 2, LookupMapCommand.class);
         addCommand("gachalist", GachaListCommand.class);
         addCommand("loot", LootCommand.class);
         addCommand("mobskill", MobSkillCommand.class);

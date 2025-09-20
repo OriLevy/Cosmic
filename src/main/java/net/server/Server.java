@@ -932,6 +932,13 @@ public class Server {
 
         loginServer = initLoginServer(8484);
 
+        try {
+            RegistrationServer.start(8585);
+            log.info("Registration endpoint listening on http://127.0.0.1:8585/register");
+        } catch (Exception e) {
+            log.error("Failed to start registration endpoint", e);
+        }
+
         log.info("Listening on port 8484");
 
         online = true;
